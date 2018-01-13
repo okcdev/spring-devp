@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-default" th:fragment="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" th:href="@{/}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></a>
+        </div>
+        <div class="navbar navbar-nav">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        环境初始化<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/conf/list}">初始配置</a></li>
+                        <li><a th:href="@{/init}">工程初始化</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        代码生成<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/loadSchema}">加载最新物理表</a></li>
+                        <li><a th:href="@{/generateSource/00000000000000000000000000000000}">生成最新代码</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        版本管理<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a th:href="@{/version/}">查看历史版本</a></li>
+                        <li><a th:href="@{/version/add/to}">创建新版本</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="http://jee.eppdev.cn">
+                        <small>EPPDEV-JEE</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
